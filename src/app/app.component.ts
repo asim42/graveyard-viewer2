@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
     // 2. How many graves are located in the graveyard named "Buschhoven"?
     this.graveyardDataService.AllAvailableGraveyards(null).subscribe(graveyardsData => {
       console.log('2. How many graves are located in the graveyard named "Buschhoven"?')
-      const features = graveyardsData.features.filter(feature => feature.properties['friedhof'] === 'Agathaberg')
+      const features = graveyardsData.features.filter(feature => feature.properties['friedhof'] === 'Buschhoven')
       console.log(features.length)
       this.numberOfGravesInBuschhoven = features.length
     })
